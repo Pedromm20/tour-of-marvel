@@ -1,0 +1,43 @@
+/* 🌙 Tema Oscuro Global */
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  /* 📌 Contenedor General */
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  /* 🎯 Botones Estilizados */
+  button {
+    background-color: #e62429;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  button:hover {
+    background-color: #c51924;
+  }
+  
+  /* 📱 Responsive General */
+  @media (max-width: 600px) {
+    .container {
+      padding: 10px;
+    }
+  }
+  
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

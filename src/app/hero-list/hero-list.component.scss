@@ -1,0 +1,109 @@
+/* 🌙 Contenedor del Hero List */
+.hero-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background-color: #121212;
+  font-family: Bebas neue;
+
+}
+
+/* 🔎 Input de Búsqueda */
+input {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  border: 1px solid #ffffff;
+  background: #222;
+  color: #ffffff;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* 🔥 Lista de Héroes */
+.hero-list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-content: center;
+  gap: 0;
+  padding: 20px;
+}
+
+/* 📸 Tarjeta de Héroe */
+.hero-card {
+  position: relative;
+  width: 250px;
+  height: 350px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  margin: 10px;
+}
+
+/* 🎭 Nombre del Héroe */
+.hero-card h4 {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  padding: 10px 0;
+  margin: 0;
+  font-size: 1.2rem;
+  transform: translateY(100%);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+/* ✨ Efecto Hover */
+.hero-card:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+
+/* 📢 Mostrar Nombre en Hover */
+.hero-card:hover h4 {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* 📉 Reducir las Tarjetas No Seleccionadas en Hover */
+.hero-list:hover .hero-card:not(:hover) {
+  transform: scale(0.9);
+  filter: brightness(0.8);
+}
+
+/* 📄 Paginación */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.pagination button {
+  background-color: #e62429;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.pagination button:hover {
+  background-color: #c51924;
+}
+
+.pagination button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}

@@ -1,0 +1,20 @@
+<div class="hero-list-container">
+  <h2>Lista de héroes</h2>
+  <input [(ngModel)]="searchTerm" (input)="search(searchTerm)" placeholder="Buscar héroe...">
+
+
+  <div class="hero-list">
+    <div *ngFor="let hero of heroes" 
+         class="hero-card"
+         (click)="goToHeroDetail(hero.id)"
+         [ngStyle]="{'background-image': 'url(' + hero.thumbnail.path + '.' + hero.thumbnail.extension + ')'}">
+      <h4>{{ hero.name }}</h4>
+    </div>
+  </div>
+
+ 
+  <div class="pagination">
+    <button (click)="prevPage()" [disabled]="currentPage === 0">Anterior</button>
+    <button (click)="nextPage()">Siguiente</button>
+  </div>
+</div>

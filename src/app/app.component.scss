@@ -1,0 +1,148 @@
+/* 🎨 Reset y Estilos Generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Bebas neue;
+  }
+  
+  body {
+    background: #0d0d0d;
+    color: white;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* 🌌 Contenedor Principal */
+  app-root {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  /* 🦸🏻‍♂️ HEADER - Estilo Moderno */
+  header {
+    display: flex;
+    flex-direction: column; /* 🔹 Se coloca el título arriba y los enlaces abajo */
+    align-items: center;
+    justify-content: center;
+    padding: 30px 50px;
+    background: rgba(15, 15, 15, 0.9);
+    border-bottom: 4px solid #ffcc00;
+    box-shadow: 0 6px 12px rgba(255, 204, 0, 0.3);
+  }
+  
+  /* 🏆 Título con Mayor Separación y Estilo Mejorado */
+  header h1 {
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+    background: linear-gradient(45deg, #ffcc00, #ff9900);
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 5px 10px rgba(255, 204, 0, 0.3);
+    margin-bottom: 40px; /* 🔹 Se separa más del navbar */
+  }
+  
+  /* 📌 NAVBAR - Mayor Separación y Mejor Alineación */
+  nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: rgba(25, 25, 25, 0.95);
+    border-bottom: 3px solid #ffcc00;
+    box-shadow: 0 4px 10px rgba(255, 204, 0, 0.3);
+    padding: 15px 0; /* 🔹 Espaciado más amplio */
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px; /* 🔹 Más separación entre enlaces */
+    padding: 0;
+  }
+  
+  /* 🌟 Enlaces con Mejor Visibilidad y Animación */
+  nav ul li {
+    position: relative;
+  }
+  
+  nav ul li a {
+    font-size: 1.4rem;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+  }
+  
+  nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: #ffcc00;
+    left: 0;
+    bottom: -8px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  nav ul li a:hover::after {
+    transform: scaleX(1);
+  }
+  
+  /* 🏆 CONTENIDO PRINCIPAL */
+  router-outlet {
+    flex: 1;
+    display: block;
+    padding: 50px;
+  }
+  
+  /* 🔥 FOOTER - Diseño Moderno */
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    background: #161616;
+    border-top: 3px solid #ffcc00;
+    box-shadow: 0 -4px 8px rgba(255, 204, 0, 0.3);
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+  }
+  
+  footer span {
+    background: linear-gradient(45deg, #ffcc00, #ff9900);
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* 🌟 RESPONSIVE DESIGN */
+  @media (max-width: 768px) {
+    header {
+      padding: 20px;
+      text-align: center;
+    }
+  
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+  
+    nav {
+      padding: 10px 0;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      text-align: center;
+      gap: 15px;
+    }
+  }
+  
